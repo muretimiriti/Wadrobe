@@ -1,50 +1,73 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Wardrobe Management System
 
-Currently, two official plugins are available:
+The Wardrobe Management System is a web application that allows users to manage their wardrobe efficiently. Users can add, edit, delete, and categorize clothing items, as well as filter and search through their wardrobe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User authentication (login/registration)
+- Add, edit, delete clothing items
+- Categorize items (e.g., tops, bottoms, shoes)
+- Filter and search functionality
+- Responsive and user-friendly UI
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- Axios
+- React Router
+- React Icons
+- CSS
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```sh
+   git clone https://github.com/your-username/wardrobe-management-system.git
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   cd wardrobe-management-system
+
+   npm install
+
+   npm start
+
+
+wardrobe-management-system
+├── public
+│   ├── index.html
+│   └── styles
+│       └── main.css
+├── src
+│   ├── components
+│   │   ├── Auth
+│   │   │   ├── Login.tsx
+│   │   │   ├── Register.tsx
+│   │   │   └── AuthForm.tsx
+│   │   ├── Clothing
+│   │   │   ├── AddClothing.tsx
+│   │   │   ├── EditClothing.tsx
+│   │   │   ├── DeleteClothing.tsx
+│   │   │   └── ClothingItem.tsx
+│   │   ├── Categories
+│   │   │   ├── Tops.tsx
+│   │   │   ├── Bottoms.tsx
+│   │   │   └── Shoes.tsx
+│   │   ├── Filter
+│   │   │   ├── Filter.tsx
+│   │   │   └── Search.tsx
+│   │   └── Layout
+│   │       ├── Header.tsx
+│   │       └── Footer.tsx
+│   ├── pages
+│   │   ├── Home.tsx
+│   │   ├── Dashboard.tsx
+│   │   └── NotFound.tsx
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── routes.tsx
+├── package.json
+├── tsconfig.json
+└── README.md
